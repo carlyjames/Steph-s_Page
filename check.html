@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My first website</title> /* giving a title to your website */
+</head>
+<!-- my style tag right under the closing tag for the header -->
+<style>
+    *{
+        box-sizing: border-box; 
+        margin: 0; /* removing unneccasery spacing from the webpage */
+        padding: 0; /* removing unneccasery spacing from the webpage */
+    }
+
+    /* styling the container class */
+    .container{
+        background: white; /* background color of white */
+        /* padding: 0 1rem; padding is used to create nice spacing so "0 padding from top and 1rem right and left" */
+
+    }
+
+    /* styling our navigation bar */
+    .navbar{
+        width: 100%;
+        background: black; /* setting a background color to our navbar */
+        padding: 1rem; /* a nice padding around it */
+        display: flex; /* display all items inside to be flex with a default of row */
+        align-items: center; /* all items should be in the center */
+        justify-content: space-between; /* small spacing for all items inside */
+        position: sticky; /* makes an item stick to a postion */
+        top: 0; /* specifies where an item should be */
+        
+    }
+    /* styling the navbar logo */
+    .navbar .logo{
+        color: white; /* a custom color*/
+        font-size: 22px; /* font size*/
+        font-weight: bold; /* make it bold */
+        font-family: cursive; /* giving it a custon font style */
+    }
+
+    /* i want to style the link attribute inside the navbar so i reference to navbar then the the a tag */
+    .navbar a{
+        text-decoration: none; /* removing the line  */
+        color: white; /* removing unneccasery spacing from the webpage */
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* giving it a custon font style */
+        margin-left: 1rem; /* spacing from the left */
+        font-weight: 500; /* make the font a little bit bold */
+    }
+
+    .content{
+        width: 100%; /* width takes 100% of the parent container */
+        padding: 1rem; /* a nice padding around it */
+        background: white; /* background color of white */
+    }
+    .content .content-header{
+        background: #01012c; /* background color of #01012c */
+        color: white; /* text color white */
+        border-radius: .5rem;  /* the borders should be curved, like a curved border meaning a border-raduis */
+        padding: .5rem 3rem; /* a nice padding around it */
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /* giving it a custon font style */
+    } 
+    /* styling an id we use # instead of .  */
+    #myParagraph{
+    color: goldenrod; /* text color goldenrod */
+    }
+    .content .main-content{
+        padding:.5rem .5rem; /* a nice padding around it */
+        font-size: 18px; /* font-size defines how big or small the text should be */
+        font-family: Arial, Helvetica, sans-serif; /* giving it a custon font style */
+
+    }
+    .content .comment-form{
+        height: 300px; /* the height is should take */
+        width: 100%; /* 100% width means it should take 100% width of the parent container */
+        padding:.5rem .5rem; /* a nice padding around it */
+        background: transparent; /* background should be transparent */
+        display: flex; /* display all items inside to be flex with a default of row */
+        align-items: flex-start; /* all items should be in the start */
+        justify-content: space-around; /* small spacing in all items */
+        flex-direction: column; /* used to define rows or colums of a flex measning the flex direction */
+        color: black;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .content .comment-form .comment{
+        background: #01012c2a;
+        max-width: 300px !important;
+        padding: 1rem 1rem;
+        border: 0;
+        border-radius: .5rem;
+        font-size: 16px;
+        
+    }
+    .content .comment-form .name{
+        padding:1rem .5rem;
+        border-radius: .5rem;
+        border: none;
+        width: 300px;
+        margin-top: 5px;
+        background: #01012c2a;
+
+    }
+    .content .comment-form .comment-form-btn{
+        padding: 1rem 2rem;
+        border: none;
+        background: #01012c;
+        color: white;
+        border-radius: .5rem;
+        margin-top: 5px;
+        cursor: pointer;
+    }
+    .footer{
+        background: black;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+        font-family: cursive;
+    }
+</style>
+<body>
+
+    <!-- am using the class attribute here so as to give the container a name i can use to style it in my css -->
+    <div class="container">
+        <!-- this will be my navigation bar -->
+        <nav class="navbar">
+            <div class="logo">
+                Insert_Logo
+            </div>
+            <!-- the <a></a> tag is used when you want to add link to your website -->
+            <div class="links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="content-header">
+                <h1>This is my awesome header</h1>
+                <!-- i can also use id for styling too -->
+                <p id="myParagraph">And a paragraph text below it</p>
+            </div>
+            <div class="main-content">
+                <p class="main-content-text">
+                    <!-- the <b> tag is used to make a text bold -->
+                    <b>Lorem</b> ipsum dolor sit, amet consectetur adipisicing elit. Aliquam
+                    nesciunt omnis iste, totam quos amet vel rem cupiditate est sunt
+                    quibusdam eum ab non pariatur voluptates repellat voluptatibus sint quis?
+                </p>
+                <!-- <br> tag for a spacing ontop -->
+                <br>
+                <p class="main-content-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam
+                    nesciunt omnis iste, totam quos amet vel rem cupiditate est sunt
+                    quibusdam eum ab non pariatur voluptates repellat voluptatibus sint quis?
+                </p>
+                <br>
+                <p class="main-content-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam
+                    nesciunt omnis iste, totam quos amet vel rem cupiditate est sunt
+                    quibusdam eum ab non pariatur voluptates repellat voluptatibus sint quis?
+                </p>
+            </div>
+            <div class="comment-form">
+                <!-- textarea for large amount of texr -->
+                <textarea class="comment"  name="" id="" cols="50" rows="10" placeholder="comment here...."></textarea>
+                <!-- imput tag for inputs -->
+                <input class="name" type="text" placeholder="Name..">
+                <!-- button tag for buttons -->
+                <button class="comment-form-btn">Comment</button>
+            </div>
+        </div>
+        <!-- footer always at the bottom of every site -->
+        <footer class="footer">
+            <p>This is my footer</p>
+            <p>Thank for visiting </p>
+        </footer>
+    </div>
+</body>
+</html>
